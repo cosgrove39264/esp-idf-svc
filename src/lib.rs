@@ -54,7 +54,8 @@ pub mod espnow;
         esp_idf_eth_spi_ethernet_w5500,
         esp_idf_eth_spi_ethernet_ksz8851snl
     ),
-    esp_idf_eth_use_openeth
+    esp_idf_eth_use_openeth,
+    esp32p4
 ))]
 pub mod eth;
 #[cfg(all(feature = "alloc", esp_idf_comp_esp_event_enabled))]

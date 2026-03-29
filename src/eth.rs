@@ -10,7 +10,7 @@ use alloc::sync::Arc;
 use embedded_svc::eth::*;
 
 #[cfg(any(
-    all(esp32, esp_idf_eth_use_esp32_emac),
+    all(any(esp32,esp32p4), esp_idf_eth_use_esp32_emac),
     any(
         esp_idf_eth_spi_ethernet_dm9051,
         esp_idf_eth_spi_ethernet_w5500,
@@ -38,7 +38,7 @@ use crate::handle::RawHandle;
 use crate::netif::*;
 use crate::private::*;
 
-#[cfg(all(esp32, esp_idf_eth_use_esp32_emac))]
+#[cfg(all(any(esp32,esp32p4), esp_idf_eth_use_esp32_emac))]
 #[derive(Copy, Clone, Debug, Eq, PartialEq)]
 pub enum RmiiEthChipset {
     /// Use the generic IEEE 802.3-compliant PHY driver.
@@ -80,7 +80,7 @@ pub enum RmiiEthChipset {
     KSZ80XX,
 }
 
-#[cfg(all(esp32, esp_idf_eth_use_esp32_emac))]
+#[cfg(all(any(esp32,esp32p4), esp_idf_eth_use_esp32_emac))]
 pub enum RmiiClockConfig<'d> {
     Input(gpio::Gpio0<'d>),
     OutputGpio0(gpio::Gpio0<'d>),
@@ -89,7 +89,7 @@ pub enum RmiiClockConfig<'d> {
     OutputInvertedGpio17(gpio::Gpio17<'d>),
 }
 
-#[cfg(all(esp32, esp_idf_eth_use_esp32_emac))]
+#[cfg(all(any(esp32,esp32p4), esp_idf_eth_use_esp32_emac))]
 impl RmiiClockConfig<'_> {
     fn eth_mac_clock_config(&self) -> eth_mac_clock_config_t {
         #[cfg(not(esp_idf_version_at_least_6_0_0))]
@@ -354,7 +354,7 @@ pub struct EthDriver<'d, T> {
     _p: PhantomData<&'d mut ()>,
 }
 
-#[cfg(all(esp32, esp_idf_eth_use_esp32_emac))]
+#[cfg(all(any(esp32,esp32p4), esp_idf_eth_use_esp32_emac))]
 impl<'d> EthDriver<'d, RmiiEth> {
     #[allow(clippy::too_many_arguments)]
     pub fn new(

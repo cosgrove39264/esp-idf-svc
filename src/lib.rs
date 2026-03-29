@@ -48,14 +48,13 @@ pub mod espnow;
     esp_idf_comp_esp_event_enabled,
 ))]
 #[cfg(any(
-    all(esp32, esp_idf_eth_use_esp32_emac),
+    all(any(esp32,esp32p4), esp_idf_eth_use_esp32_emac), 
     any(
         esp_idf_eth_spi_ethernet_dm9051,
         esp_idf_eth_spi_ethernet_w5500,
         esp_idf_eth_spi_ethernet_ksz8851snl
     ),
-    esp_idf_eth_use_openeth,
-    esp32p4
+    esp_idf_eth_use_openeth
 ))]
 pub mod eth;
 #[cfg(all(feature = "alloc", esp_idf_comp_esp_event_enabled))]

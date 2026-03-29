@@ -63,7 +63,7 @@ embuild = "0.33"
 
 [dev-dependencies]
 anyhow = "1"
-esp-idf-sys = { version = "0.37.1", features = ["binstart"] }
+esp-idf-sys = { git = "https://github.com/cosgrove39264/esp-idf-sys.git", branch = "patches",features = ['binstart'] }
 futures = "0.3"
 serde = { version = "1", default-features = false, features = ["derive"] }
 serde_json = { version = "1", default-features = false, features = ["alloc"] }

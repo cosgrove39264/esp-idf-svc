@@ -10,7 +10,7 @@ use alloc::sync::Arc;
 use embedded_svc::eth::*;
 
 #[cfg(any(
-    all(esp32, esp_idf_eth_use_esp32_emac),
+    all(any(esp32, esp32p4), esp_idf_eth_use_esp32_emac),
     any(
         esp_idf_eth_spi_ethernet_dm9051,
         esp_idf_eth_spi_ethernet_w5500,
@@ -38,7 +38,7 @@ use crate::handle::RawHandle;
 use crate::netif::*;
 use crate::private::*;
 
-#[cfg(all(esp32, esp_idf_eth_use_esp32_emac))]
+#[cfg(all(any(esp32, esp32p4), esp_idf_eth_use_esp32_emac))]
 #[derive(Copy, Clone, Debug, Eq, PartialEq)]
 pub enum RmiiEthChipset {
     /// Use the generic IEEE 802.3-compliant PHY driver.
@@ -80,35 +80,46 @@ pub enum RmiiEthChipset {
     KSZ80XX,
 }
 
-#[cfg(all(esp32, esp_idf_eth_use_esp32_emac))]
+#[cfg(all(any(esp32, esp32p4), esp_idf_eth_use_esp32_emac))]
 pub enum RmiiClockConfig<'d> {
     Input(gpio::Gpio0<'d>),
     OutputGpio0(gpio::Gpio0<'d>),
     /// This according to ESP-IDF is for "testing" only    
     OutputGpio16(gpio::Gpio16<'d>),
     OutputInvertedGpio17(gpio::Gpio17<'d>),
+    OutputInvertedGpio50(gpio::Gpio50<'d>),
+
+    InputGpio50(gpio::Gpio50<'d>),
 }
 
-#[cfg(all(esp32, esp_idf_eth_use_esp32_emac))]
+#[cfg(all(any(esp32, esp32p4), esp_idf_eth_use_esp32_emac))]
 impl RmiiClockConfig<'_> {
     fn eth_mac_clock_config(&self) -> eth_mac_clock_config_t {
         #[cfg(not(esp_idf_version_at_least_6_0_0))]
         let rmii = match self {
             Self::Input(_) => eth_mac_clock_config_t__bindgen_ty_2 {
                 clock_mode: emac_rmii_clock_mode_t_EMAC_CLK_EXT_IN,
-                clock_gpio: emac_rmii_clock_gpio_t_EMAC_CLK_IN_GPIO,
+                clock_gpio: 0, /*emac_rmii_clock_gpio_t_EMAC_CLK_IN_GPIO*/
+            },
+            Self::InputGpio50(_) => eth_mac_clock_config_t__bindgen_ty_2 {
+                clock_mode: emac_rmii_clock_mode_t_EMAC_CLK_EXT_IN,
+                clock_gpio: 50,
+            },
+            Self::OutputInvertedGpio50(_) => eth_mac_clock_config_t__bindgen_ty_2 {
+                clock_mode: emac_rmii_clock_mode_t_EMAC_CLK_OUT,
+                clock_gpio: 50,
             },
             Self::OutputGpio0(_) => eth_mac_clock_config_t__bindgen_ty_2 {
                 clock_mode: emac_rmii_clock_mode_t_EMAC_CLK_OUT,
-                clock_gpio: emac_rmii_clock_gpio_t_EMAC_APPL_CLK_OUT_GPIO,
+                clock_gpio: 0, /*emac_rmii_clock_gpio_t_EMAC_APPL_CLK_OUT_GPIO*/
             },
             Self::OutputGpio16(_) => eth_mac_clock_config_t__bindgen_ty_2 {
                 clock_mode: emac_rmii_clock_mode_t_EMAC_CLK_OUT,
-                clock_gpio: emac_rmii_clock_gpio_t_EMAC_CLK_OUT_GPIO,
+                clock_gpio: 16, /*emac_rmii_clock_gpio_t_EMAC_CLK_OUT_GPIO*/
             },
             Self::OutputInvertedGpio17(_) => eth_mac_clock_config_t__bindgen_ty_2 {
                 clock_mode: emac_rmii_clock_mode_t_EMAC_CLK_OUT,
-                clock_gpio: emac_rmii_clock_gpio_t_EMAC_CLK_OUT_180_GPIO,
+                clock_gpio: 17, /*emac_rmii_clock_gpio_t_EMAC_CLK_OUT_180_GPIO*/
             },
         };
 
@@ -130,6 +141,14 @@ impl RmiiClockConfig<'_> {
             Self::OutputInvertedGpio17(_) => eth_mac_clock_config_t__bindgen_ty_2 {
                 clock_mode: emac_rmii_clock_mode_t_EMAC_CLK_OUT,
                 clock_gpio: 17,
+            },
+            Self::OutputInvertedGpio50(_) => eth_mac_clock_config_t__bindgen_ty_2 {
+                clock_mode: emac_rmii_clock_mode_t_EMAC_CLK_OUT,
+                clock_gpio: 50,
+            },
+            Self::InputGpio50(_) => eth_mac_clock_config_t__bindgen_ty_2 {
+                clock_mode: emac_rmii_clock_mode_t_EMAC_CLK_EXT_IN,
+                clock_gpio: 50,
             },
         };
 
@@ -354,9 +373,10 @@ pub struct EthDriver<'d, T> {
     _p: PhantomData<&'d mut ()>,
 }
 
-#[cfg(all(esp32, esp_idf_eth_use_esp32_emac))]
+#[cfg(all(any(esp32, esp32p4), esp_idf_eth_use_esp32_emac))]
 impl<'d> EthDriver<'d, RmiiEth> {
     #[allow(clippy::too_many_arguments)]
+    #[cfg(not(esp32p4))]
     pub fn new(
         mac: crate::hal::mac::MAC<'d>,
         rmii_rdx0: gpio::Gpio25<'d>,
@@ -392,6 +412,43 @@ impl<'d> EthDriver<'d, RmiiEth> {
     }
 
     #[allow(clippy::too_many_arguments)]
+    #[cfg(esp32p4)]
+    pub fn new(
+        mac: crate::hal::mac::MAC<'d>,
+        rmii_rdx0: gpio::Gpio29<'d>,
+        rmii_rdx1: gpio::Gpio30<'d>,
+        rmii_crs_dv: gpio::Gpio28<'d>,
+        rmii_mdc: impl gpio::OutputPin + 'd,
+        rmii_txd1: gpio::Gpio34<'d>,
+        rmii_tx_en: gpio::Gpio49<'d>,
+        rmii_txd0: gpio::Gpio35<'d>,
+        rmii_mdio: impl gpio::InputPin + gpio::OutputPin + 'd,
+        rmii_ref_clk_config: RmiiClockConfig<'d>,
+        rst: Option<impl gpio::OutputPin + 'd>,
+        chipset: RmiiEthChipset,
+        phy_addr: Option<u32>,
+        sysloop: EspSystemEventLoop,
+    ) -> Result<Self, EspError> {
+        Self::new_rmii(
+            mac,
+            rmii_rdx0,
+            rmii_rdx1,
+            rmii_crs_dv,
+            rmii_mdc,
+            rmii_txd1,
+            rmii_tx_en,
+            rmii_txd0,
+            rmii_mdio,
+            rmii_ref_clk_config,
+            rst,
+            chipset,
+            phy_addr,
+            sysloop,
+        )
+    }
+
+    #[allow(clippy::too_many_arguments)]
+    #[cfg(not(esp32p4))]
     pub fn new_rmii(
         _mac: crate::hal::mac::MAC<'d>,
         _rmii_rdx0: gpio::Gpio25<'d>,
@@ -416,6 +473,45 @@ impl<'d> EthDriver<'d, RmiiEth> {
                 rmii_mdio.pin() as _,
                 &rmii_ref_clk_config,
             ),
+            Self::rmii_phy(chipset, rst, phy_addr)?,
+            None,
+            RmiiEth {},
+            sysloop,
+        )?;
+
+        Ok(eth)
+    }
+
+    #[allow(clippy::too_many_arguments)]
+    #[cfg(esp32p4)]
+    pub fn new_rmii(
+        _mac: crate::hal::mac::MAC<'d>,
+        _rmii_rdx0: gpio::Gpio29<'d>,
+        _rmii_rdx1: gpio::Gpio30<'d>,
+        _rmii_crs_dv: gpio::Gpio28<'d>,
+        rmii_mdc: impl gpio::OutputPin + 'd,
+        _rmii_txd1: gpio::Gpio34<'d>,
+        _rmii_tx_en: gpio::Gpio49<'d>,
+        _rmii_txd0: gpio::Gpio35<'d>,
+        rmii_mdio: impl gpio::InputPin + gpio::OutputPin + 'd,
+        rmii_ref_clk_config: RmiiClockConfig<'d>,
+        rst: Option<impl gpio::OutputPin + 'd>,
+        chipset: RmiiEthChipset,
+        phy_addr: Option<u32>,
+        sysloop: EspSystemEventLoop,
+    ) -> Result<Self, EspError> {
+        let rst = rst.map(|rst| rst.pin() as _);
+
+        let eth = Self::init(
+            {
+                let m = Self::rmii_mac(
+                    rmii_mdc.pin() as _,
+                    rmii_mdio.pin() as _,
+                    &rmii_ref_clk_config,
+                );
+
+                m
+            },
             Self::rmii_phy(chipset, rst, phy_addr)?,
             None,
             RmiiEth {},
@@ -537,6 +633,22 @@ impl<'d> EthDriver<'d, RmiiEth> {
                 },
             },
             interface: eth_data_interface_t_EMAC_DATA_INTERFACE_RMII,
+            clock_config: eth_mac_clock_config_t {
+                rmii: eth_mac_clock_config_t__bindgen_ty_2 {
+                    clock_mode: emac_rmii_clock_mode_t_EMAC_CLK_EXT_IN,
+                    clock_gpio: 50i32,
+                },
+            },
+            emac_dataif_gpio: eth_mac_dataif_gpio_config_t {
+                rmii: eth_mac_rmii_gpio_config_t {
+                    tx_en_num: 49,
+                    txd0_num: 34,
+                    txd1_num: 35,
+                    crs_dv_num: 28,
+                    rxd0_num: 29,
+                    rxd1_num: 30,
+                },
+            },
             ..Default::default()
         }
     }
@@ -544,14 +656,26 @@ impl<'d> EthDriver<'d, RmiiEth> {
     // In v6.0, __bindgen_anon_1 wrapper was removed; smi_gpio is a direct field
     #[cfg(esp_idf_version_at_least_6_0_0)]
     fn eth_esp32_emac_default_config(mdc: i32, mdio: i32) -> eth_esp32_emac_config_t {
-        eth_esp32_emac_config_t {
+        #[cfg(not(esp32p4))]
+        return eth_esp32_emac_config_t {
             smi_gpio: emac_esp_smi_gpio_config_t {
                 mdc_num: mdc,
                 mdio_num: mdio,
             },
             interface: eth_data_interface_t_EMAC_DATA_INTERFACE_RMII,
             ..Default::default()
-        }
+        };
+
+        #[cfg(esp32p4)]
+        return eth_esp32_emac_config_t {
+            smi_gpio: emac_esp_smi_gpio_config_t {
+                mdc_num: mdc,
+                mdio_num: mdio,
+            },
+            interface: eth_data_interface_t_EMAC_DATA_INTERFACE_RMII,
+
+            ..Default::default()
+        };
     }
 }
 

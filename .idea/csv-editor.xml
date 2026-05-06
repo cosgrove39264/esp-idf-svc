@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CsvFileAttributes">
+    <option name="attributeMap">
+      <map>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/app_update/test_apps/test_app_update/partition_table_unit_test_two_ota.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/app_update/test_apps/test_app_update/partition_table_unit_test_two_ota_2m.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/esp_driver_jpeg/test_apps/jpeg_test_apps/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/esp_driver_uart/test_apps/uart_vfs/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/esp_hw_support/test_apps/mspi/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/esp_mm/test_apps/mm/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/esp_mm/test_apps/mmap_hw/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/esp_partition/host_test/partition_api_test/partition_table.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/esp_partition/host_test/partition_api_test/partition_table_8M.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/esp_psram/test_apps/psram/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/esp_tee/test_apps/tee_test_fw/partitions_tee_ota.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/fatfs/host_test/partition_table.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/nvs_flash/test_apps/partitions_nvs_encr_flash_enc.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_singleapp.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_singleapp_coredump.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_singleapp_encr_nvs.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_singleapp_large.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_singleapp_large_coredump.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_singleapp_large_encr_nvs.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_singleapp_tee.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_two_ota.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_two_ota_coredump.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_two_ota_encr_nvs.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_two_ota_large.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/partitions_two_ota_tee.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/test_gen_esp32part_host/partitions-utf8-bom.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/partition_table/test_gen_esp32part_host/partitions-utf8_without-bom.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/spi_flash/test_apps/esp_flash/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/spi_flash/test_apps/esp_flash_freq_limit/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/spi_flash/test_apps/esp_flash_stress/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/spi_flash/test_apps/flash_encryption/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/spi_flash/test_apps/flash_mmap/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/spi_flash/test_apps/flash_suspend/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/spi_flash/test_apps/mspi_test/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/spiffs/host_test/partition_table.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/vfs/test_apps/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/wear_levelling/host_test/partition_table.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/components/wear_levelling/test_apps/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/bluetooth/esp_ble_mesh/aligenie_demo/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/bluetooth/esp_ble_mesh/fast_provisioning/fast_prov_server/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/bluetooth/esp_ble_mesh/wifi_coexist/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/build_system/cmake/import_lib/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/custom_bootloader/bootloader_multiboot/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/ethernet/iperf/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/mesh/ip_internal_network/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/mesh/manual_networking/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/network/simple_sniffer/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/openthread/ot_br/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/openthread/ot_cli/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/openthread/ot_rcp/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/openthread/ot_sleepy_device/deep_sleep/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/openthread/ot_sleepy_device/light_sleep/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/openthread/ot_trel/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/peripherals/i2c/i2c_slave_network_sensor/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/peripherals/i2c/i2c_tools/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/peripherals/lcd/i80_controller/partitions_lvgl_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/peripherals/parlio/parlio_rx/logic_analyzer/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/peripherals/usb/device/tusb_composite_msc_serialdevice/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/peripherals/usb/device/tusb_msc/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/protocols/http_server/file_serving/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/protocols/http_server/restful_server/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/protocols/mqtt/ssl_ds/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/provisioning/wifi_prov_mgr/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/security/flash_encryption/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/security/nvs_encryption_hmac/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/security/security_features_app/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/fatfs/fatfsgen/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/fatfs/fs_operations/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/fatfs/getting_started/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/littlefs/partitions_demo_esp_littlefs.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/nvs/nvsgen/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/partition_api/partition_find/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/partition_api/partition_mmap/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/partition_api/partition_ops/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/parttool/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/perf_benchmark/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/spiffs/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/spiffsgen/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/storage/wear_levelling/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/system/console/advanced/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/system/console/basic/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/system/deep_sleep/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/system/efuse/test/partitions_efuse_emul.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/system/flash_suspend/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/system/ota/advanced_https_ota/anti_rollback_partition.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/system/ota/advanced_https_ota/partitions_example_with_ble.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/system/ota/partitions_ota/test/partitions_efuse_emul_1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/system/ota/partitions_ota/test/partitions_efuse_emul_2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/system/ota/partitions_ota/test/partitions_efuse_emul_3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/system/xip_from_psram/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/zigbee/esp_zigbee_gateway/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/zigbee/light_sample/HA_on_off_light/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/examples/zigbee/light_sample/HA_on_off_switch/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/test_apps/build_system/bootloader/anti_rollback_partition.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/test_apps/build_system/custom_partition_subtypes/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/test_apps/storage/fatfsgen/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/test_apps/storage/partition_table_readonly/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/test_apps/storage/sdmmc_console/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/test_apps/system/bootloader_sections/partitions_example.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/test_apps/system/mmu_page_size/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/test_apps/system/panic/partitions_capture_dram.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/test_apps/system/panic/partitions_coredump_encrypted.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/test_apps/system/panic/partitions_coredump_plain.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/unit-test-app/partition_table_unit_test_app.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/unit-test-app/partition_table_unit_test_app_2m.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/unit-test-app/partition_table_unit_test_two_ota.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/.embuild/espressif/esp-idf/v5.5.3/tools/unit-test-app/partition_table_unit_test_two_ota_2m.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/partitions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
